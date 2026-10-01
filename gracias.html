@@ -41,11 +41,32 @@
       padding: 40px 20px;
     }
 
-    .logo {
-      width: 210px;
-      max-width: 70%;
-      height: auto;
+    .logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
       margin-bottom: 34px;
+    }
+
+    .logo-vurpix {
+      width: 190px;
+      max-width: 42vw;
+      height: auto;
+      display: block;
+    }
+
+    .separator {
+      width: 1px;
+      height: 38px;
+      background: #ddd9e2;
+    }
+
+    .logo-partner {
+      width: 150px;
+      max-width: 34vw;
+      height: auto;
+      display: block;
     }
 
     .check {
@@ -102,7 +123,10 @@
 
     @media (max-width: 480px) {
       .container { padding: 32px 10px; }
-      .logo { width: 180px; margin-bottom: 28px; }
+      .logos { gap: 14px; margin-bottom: 28px; }
+      .logo-vurpix { width: 155px; }
+      .logo-partner { width: 120px; }
+      .separator { height: 32px; }
       p { font-size: 1rem; }
     }
   </style>
@@ -110,7 +134,11 @@
 
 <body>
   <main class="container">
-    <img class="logo" src="assets/logo-vurpix.png" alt="Vurpix">
+    <div class="logos" aria-label="Vurpix, Salesforce Partner">
+      <img class="logo-vurpix" src="assets/logo-vurpix.png" alt="Vurpix">
+      <span class="separator" aria-hidden="true"></span>
+      <img class="logo-partner" src="assets/salesforce-partner.png" alt="Salesforce Partner">
+    </div>
 
     <div class="check" aria-hidden="true">✓</div>
 
